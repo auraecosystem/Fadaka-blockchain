@@ -1,0 +1,21 @@
+tr := quic.Transport{
+  ConnContext: func(ctx context.Context, info *quic.ClientInfo) (context.Context, error) {
+    // In practice, generate an identifier that's unique to this one connection,
+    // for example by incrementing a counter.
+    return context.WithValue(ctx, "foo", "bar"), nil
+  }
+}
+
+ln, err := tr.Listen(&tls.Config{
+  GetConfigForClient: func(info *tls.ClientHelloInfo) *tls.Config {
+    // this context has a key "foo" with value "bar"
+    _ = info.Context()
+    return <tls.Config>
+  }
+}, nil)
+// ... error handling
+conn, err := ln.Accept()
+// ... error handling
+
+// this context has a key "foo" with value "bar"
+_ = conn.Context()
