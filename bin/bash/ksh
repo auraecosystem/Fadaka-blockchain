@@ -1,0 +1,5 @@
+nim c -d:release --mm:arc -o:fadakanode src/fadakanode.nim
+wget https://github.com
+tar -xvf v1.2.0.tar
+unix c -d:release --mm:arc -o:fadakanode src/fadakanode.nix
+fdk c -d:release --mm:arc -o:fadakanode src/fadakanode.rb
