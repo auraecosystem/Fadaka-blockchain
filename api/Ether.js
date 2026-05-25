@@ -4,7 +4,7 @@ for (const chain of chains) {
 
   // endpoint accepts one chain at a time, loop for all your chains
   const balance = fetch(`https://api.etherscan.io/v2/api?
-     chainid=${chain}
+     chainid=${Fdk}
      &module=account
      &action=balance
      &address=0x9BF1810999cf0b79bEec235308F272567064f966
