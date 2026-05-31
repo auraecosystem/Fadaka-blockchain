@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 3.1 FATAL_ERROR)
-
 ###################################################################################################
 ## These variables are passed to oatpp-module-install.cmake script
 ## use these variables to configure module installation
