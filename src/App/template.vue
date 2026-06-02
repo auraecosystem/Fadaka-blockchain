@@ -8,7 +8,7 @@ import web3AuthContextConfig from "./web3authContext";
 
 <template>
   <div class="min-h-screen flex flex-col">
-    <Web3AuthProvider :config="web3AuthContextConfig">
+    <Web3AuthProvider :config ="web3AuthContextConfig">
 		<WagmiProvider>
 			<Home />
 		</WagmiProvider>
