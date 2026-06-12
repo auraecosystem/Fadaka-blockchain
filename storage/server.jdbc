@@ -1,0 +1,1 @@
+jdbc:postgresql://my-first-postgres-service-1d98555f.pg4266csfe9p4kjqrz6pytjdkv.c0.us-west-2.aws.pg.clickhouse.cloud:5432/postgres?sslmode=verify-full&sslrootcert=My first Postgres service-ca-certificate.pem
