@@ -1,3 +1,5 @@
+```3Djson
+
                     ┌──────────────────────┐
                     │   Identity Layer     │
                     │   (.p12 keystores)   │
@@ -21,3 +23,4 @@
             │  P2P / Blockchain     │
             │  authentication base  │
             └──────────────────────┘
+```
