@@ -14,7 +14,8 @@ A lightweight Key Management System using PKCS#12 (.p12) keystores.
 ```bash
 bash src/generate.sh node1
 uvicorn api.main:app --reload
-
+```
+```run
 fadaka-identity-stack/
 │
 ├── keystores/                  # .p12 identities (never commit real ones)
