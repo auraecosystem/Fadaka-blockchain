@@ -1,0 +1,29 @@
+[Unit]
+Description=Lighthouse
+After=network.target
+Wants=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+Type=simple
+Restart=always
+RestartSec=5
+TimeoutStopSec=180
+ExecStart=/home/ubuntu/.cargo/bin/lighthouse bn \
+        --network mainnet \
+        --checkpoint-sync-url=https://mainnet-checkpoint-sync.attestant.io \
+        --eth1 \
+        --http \
+        --http-address "0.0.0.0" \
+        --http-port 3500 \
+        --datadir=/mnt/data/lighthouse \
+        --http-allow-sync-stalled \
+        --execution-endpoints=http://localhost:8551 \
+        --jwt-secrets=/var/lib/goethereum/jwtsecret \
+        --disable-deposit-contract-sync \
+        --always-prepare-payload \
+        --prepare-payload-lookahead 12000
+
+[Install]
+WantedBy=default.target
