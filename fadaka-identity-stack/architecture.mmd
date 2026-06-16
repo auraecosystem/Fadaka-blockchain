@@ -1,0 +1,23 @@
+                    ┌──────────────────────┐
+                    │   Identity Layer     │
+                    │   (.p12 keystores)   │
+                    └─────────┬────────────┘
+                              │
+                              ▼
+            ┌─────────────────────────────────┐
+            │      FastAPI KMS Server         │
+            │  - generate keys                │
+            │  - sign data                   │
+            │  - verify signatures           │
+            └─────────┬───────────┬──────────┘
+                      │           │
+          ┌───────────▼───┐   ┌──▼───────────┐
+          │ Wallet Layer   │   │ Node Layer   │
+          │ tx signing     │   │ TLS identity │
+          └───────────────┘   └──────────────┘
+                      │
+                      ▼
+            ┌──────────────────────┐
+            │  P2P / Blockchain     │
+            │  authentication base  │
+            └──────────────────────┘
