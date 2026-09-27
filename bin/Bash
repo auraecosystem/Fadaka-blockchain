@@ -1,4 +1,4 @@
-$ ./btfs init
+$ ./btfs init 
 Generating TRON key with BIP39 seed phrase...
 Master public key:xpub661MyMwAqRbcGgHpeMqFkS5hnwoGeAcHG5KkDQwke7wFxtKqfsXTCTjWsoU2dYVXVGvV7EuGcviEzEJ143TezxxXvs2zZ9FYTtCei8iRQ66
 initializing BTFS node at /home/ubuntu/.btfs
