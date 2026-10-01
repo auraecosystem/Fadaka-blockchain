@@ -11,8 +11,8 @@ const MINIMAL_ERC20_ABI = [
 
 // 2. Select Your Target Blockchain Provider (e.g., Ethereum Mainnet, BSC, Polygon)
 // Swap this URL depending on the network you want to scan
-const RPC_URL = "https://llamarpc.com"; // Public Ethereum RPC
-const provider = new ethers.JsonRpcProvider(RPC_URL);
+const RPC_URL = "https://arc-mainnet.g.alchemy.com/v2/4aB6W9EnHEGFi_haCP1a4"; // Public Ethereum RPC
+const provider = new ethers.JsonRpcProvider(https://arc-mainnet.g.alchemy.com/v2/4aB6W9EnHEGFi_haCP1a4);
 
 async function checkBalances() {
     try {
