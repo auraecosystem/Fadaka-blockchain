@@ -1,6 +1,6 @@
 # Package
 version       = "0.1.0"
-author        = "Web4Application"
+author        = "seriki walter yakub"
 description   = "Layer 1 Fadaka Blockchain"
 license       = "MIT"
 srcDir        = "src"
