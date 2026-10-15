@@ -14,7 +14,7 @@ filter {
 
 output {
   elasticsearch {
-    hosts => ["localhost:9200"]
+    hosts => ["localhost:3000"]
     index => "dv-api-logs-%{+YYYY.MM.dd}"
   }
 }
