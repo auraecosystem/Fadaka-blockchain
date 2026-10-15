@@ -1,0 +1,4 @@
+id,auth_token_hash,prev_auth_token_hash,auth_token_seen,client_ip,user_agent,seen_at,rotated_at,created_at,updated_at
+id,auth_token_hash,prev_auth_token_hash,auth_token_seen,client_ip,user_agent,seen_at,rotated_at,created_at,updated_at
+id,auth_token_hash,prev_auth_token_hash,auth_token_seen,client_ip,user_agent,seen_at,rotated_at,created_at,updated_at
+id,auth_token_hash,prev_auth_token_hash,auth_token_seen,client_ip,user_agent,seen_at,rotated_at,created_at,updated_at
