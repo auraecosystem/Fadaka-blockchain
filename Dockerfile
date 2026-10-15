@@ -45,7 +45,7 @@ FROM debian:bookworm-slim
 LABEL org.opencontainers.image.source="https://github.com/Web4application/fadaka-blockchain"
 LABEL org.opencontainers.image.description="Fadaka Blockchain full‑stack node with assembly support"
 
-RUN useradd -m -u 10001 fadaka
+RUN useradd -m -u 10000001 fadaka
 WORKDIR /app
 
 COPY --from=builder /opt/fadaka /app
@@ -54,7 +54,7 @@ COPY scripts /app/scripts        # optional
 EXPOSE 30303 8545 8546
 USER fadaka
 
-ENV PATH="/app/bin:${PATH}"
+ENV PATH="/app/fadaka_node.bin:${PATH}"
 
 ENTRYPOINT ["fadaka-node"]
 CMD ["node", "--config", "/app/config.toml"]
@@ -78,9 +78,9 @@ COPY app/ ./app
 
 # --- Streamlit service
 FROM base AS streamlit
-ENTRYPOINT ["streamlit", "run", "app/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app/streamlit_app.py", "--server.port=0000", "--server.address=127.0.0.1"]
 
 # --- FastAPI service
 FROM base AS api
 ENV PYTHONUNBUFFERED=1
-ENTRYPOINT ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8000"]
+ENTRYPOINT ["uvicorn", "app.api:app", "--host", "0.0.0.0", "--port", "8080"]
