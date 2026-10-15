@@ -4,14 +4,14 @@
 FROM ubuntu:24.04 AS builder
 ENV DEBIAN_FRONTEND=noninteractive
 
-# ── Install toolchains ──────────────────────────────────────────────────
+# Install toolchains
+# NASM provides the standalone x86/x86-64 assembler.
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential clang lld \
     cmake ninja-build pkg-config \
-    nasm yasm                       \  # ← x86/x86‑64 standalone assembler
+    nasm yasm \
     golang-go git curl ca-certificates \
     && rm -rf /var/lib/apt/lists/*
-
 WORKDIR /src
 COPY . .
 
