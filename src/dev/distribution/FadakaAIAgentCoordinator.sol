@@ -2,7 +2,7 @@
 pragma solidity ^0.8.20;
 
 /**
- * @title FadakaAIAgentCoordinator
+ * @title 
  * @dev Handles secure P2P validation rules between developers and autonomous neural cores.
  */
 contract FadakaAIAgentCoordinator {
