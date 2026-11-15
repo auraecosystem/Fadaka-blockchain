@@ -1,0 +1,1 @@
+psql "host=my-first-postgres-service-1d98555f.pg4266csfe9p4kjqrz6pytjdkv.c0.us-west-2.aws.pg.clickhouse.cloud port=5432 user=postgres dbname=postgres sslmode=verify-full sslrootcert=My first Postgres service-ca-certificate.pem"
