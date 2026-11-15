@@ -1,0 +1,55 @@
+```
+solid cube_corner
+  facet normal 0.0 -1.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 1.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+  facet normal 0.0 0.0 -1.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 1.0 0.0 0.0
+    endloop
+  endfacet
+  facet normal -1.0 0.0 0.0
+    outer loop
+      vertex 0.0 0.0 0.0
+      vertex 0.0 0.0 1.0
+      vertex 0.0 1.0 0.0
+    endloop
+  endfacet
+  facet normal 0.577 0.577 0.577
+    outer loop
+      vertex 1.0 0.0 0.0
+      vertex 0.0 1.0 0.0
+      vertex 0.0 0.0 1.0
+    endloop
+  endfacet
+endsolid
+                    ┌──────────────────────┐
+                    │   Identity Layer     │
+                    │   (.p12 keystores)   │
+                    └─────────┬────────────┘
+                              │
+                              ▼
+            ┌─────────────────────────────────┐
+            │      FastAPI KMS Server         │
+            │  - generate keys                │
+            │  - sign data                   │
+            │  - verify signatures           │
+            └─────────┬───────────┬──────────┘
+                      │           │
+          ┌───────────▼───┐   ┌──▼───────────┐
+          │ Wallet Layer   │   │ Node Layer   │
+          │ tx signing     │   │ TLS identity │
+          └───────────────┘   └──────────────┘
+                      │
+                      ▼
+            ┌──────────────────────┐
+            │  P2P / Blockchain     │
+            │  authentication base  │
+            └──────────────────────┘
+```

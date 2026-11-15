@@ -1,0 +1,6 @@
+keystores/
+*.p12
+*.jks
+certs/
+__pycache__/
+.env
