@@ -212,4 +212,4 @@ like **Fluukpe**, **QUBUHUB**, and **Web4AI** through a sovereign Layer
 -   Whitepaper v1.0 © 2025 Seriki Yakub --- Web4 Labs\
 -   Open Source License: Apache 2.0\
 -   GitHub Repository:
-    [Web4application/fadaka](https://github.com/Web4application/fadaka)
+    [fadaka](https://github.com/Web4application/fadaka)
