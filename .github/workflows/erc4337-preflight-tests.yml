@@ -1,0 +1,33 @@
+name: ERC-4337 preflight tests
+
+on:
+  pull_request:
+    paths:
+      - "scripts/erc4337-entrypoint-preflight.mjs"
+      - "tests/erc4337-entrypoint-preflight.test.mjs"
+      - "Docs/ERC4337_Fadaka_Integration.md"
+      - ".github/workflows/erc4337-preflight-tests.yml"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/erc4337-entrypoint-preflight.mjs"
+      - "tests/erc4337-entrypoint-preflight.test.mjs"
+      - "Docs/ERC4337_Fadaka_Integration.md"
+      - ".github/workflows/erc4337-preflight-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Run read-only preflight unit tests
+        run: node --test tests/erc4337-entrypoint-preflight.test.mjs
